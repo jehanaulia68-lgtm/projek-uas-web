@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purwakarta Istimewa</title>
+    <link rel="stylesheet" href="darkmode.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #F4F8FB;
+        }
+
+        button.dark-mode {
+            background: transparent;
+            border: none;
+            color: white;
+            margin-left: 15px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #0D6EFD, #3b82f6);
+            padding: 15px 0;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            transition: .3s;
+            margin-left: 15px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #FFD54F !important;
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: url(https://img.okezone.com/content/2016/09/18/406/1492035/purwakarta-alternatif-kawasan-wisata-di-jawa-barat-24spcCXJ40.jpg) center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            padding: 20px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .45);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+
+        .title {
+            font-size: 32px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .leader {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+            height: 100%;
+        }
+
+        .leader img {
+            width: 100%;
+            max-width: 240px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .leader h3 {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #0D6EFD;
+            font-size: 1.35rem;
+        }
+
+        .artikel img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+        }
+
+        .sumber {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            text-decoration: none;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+            transition: .3s;
+            border: none;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            text-align: justify;
+            margin-top: 30px;
+        }
+
+        .card-content p {
+            line-height: 30px;
+            font-size: 18px;
+        }
+
+        footer {
+            background: #0D6EFD;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 75vh;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .title {
+                font-size: 26px;
+                text-align: center;
+            }
+
+            .leader img {
+                height: 260px;
+            }
+
+            .artikel img {
+                height: 220px;
+            }
+
+            .card-content p {
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="beranda.html">
+                    <img src="logo.png" width="40" class="me-2" alt="">
+                    <strong>Pesona Purwakarta</strong>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="beranda.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="wisata.html">Wisata</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kuliner.html">Kuliner</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pesantiket.html">Pesan Tiket</a>
+                        </li>
+                        <button class="dark-mode" onclick="ubahMode()" id="toggleDarkMode">Dark mode 🌙</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content container">
+            <h1 class="fw-bold">Purwakarta Istimewa</h1>
+            <p class="lead">
+                Jelajahi keindahan alam, kuliner, dan destinasi wisata terbaik di Purwakarta.
+            </p>
+            <a href="#pimpinan" class="btn btn-primary btn-lg px-4">
+                Jelajahi Sekarang
+            </a>
+        </div>
+    </div>
+
+
+    <section id="pimpinan" class="container my-5">
+        <h2 class="title">Pimpinan Daerah</h2>
+        <div class="row justify-content-center g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="leader">
+                    <img src="https://purwakartakab.go.id/assets/v2/assets/images/featured/bupati.jpg"
+                        class="img-fluid rounded" alt="Bupati">
+                    <h3>Saepul Bahri Binzein</h3>
+                    <p>Bupati Purwakarta</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="leader">
+                    <img src="https://purwakartakab.go.id/assets/v2/assets/images/featured/wakil-bupati.jpg"
+                        class="img-fluid rounded" alt="Wakil Bupati">
+                    <h3>Abang Ijo Hapidin</h3>
+                    <p>Wakil Bupati Purwakarta</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="title">Sejarah Purwakarta</h2>
+        <div class="artikel">
+            <img src="https://cdn1-production-images-kly.akamaized.net/eyEsOGn2gsHz0T7sJ6zGF_MhqYQ=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1659734/original/017784800_1501062466-20170726-patung-monumen-purwakarta.jpg"
+                alt="Monumen Purwakarta">
+        </div>
+
+        <div class="card-content">
+            <p class="sumber">Sumber: Portal Resmi Pemerintah Kabupaten Purwakarta</p>
+            <h3>Sejarahnya</h3>
+            <p>
+                Purwakarta merupakan salah satu kabupaten di Provinsi Jawa Barat yang memiliki sejarah panjang dan nilai
+                budaya yang masih terjaga hingga saat ini.
+                Nama Purwakarta berasal dari dua kata, yaitu purwa yang berarti awal atau permulaan dan karta yang
+                berarti ramai, hidup, aman, dan sejahtera.
+                Letaknya yang strategis di antara Jakarta sebagai ibu kota negara dan Bandung sebagai ibu kota provinsi
+                menjadikan Purwakarta berkembang sebagai wilayah penting sejak masa kolonial.
+            </p>
+            <br>
+            <p>
+                Sejarah mencatat bahwa kawasan Purwakarta pernah menjadi lumbung beras dan teh serta dijadikan sebagai
+                basis logistik Kerajaan Mataram saat melakukan penyerangan terhadap VOC di Batavia pada abad ke-18.
+                Pada masa Hindia Belanda, wilayah ini juga dimanfaatkan sebagai daerah penunjang kegiatan perdagangan
+                sehingga menyisakan banyak bangunan bersejarah yang masih dapat ditemukan hingga sekarang.
+            </p>
+            <br>
+            <p>
+                Salah satu bangunan bersejarah yang menjadi ikon Purwakarta adalah Gedung Negara, yang saat ini
+                digunakan sebagai kantor Bupati Purwakarta.
+                Gedung bergaya perpaduan arsitektur tradisional Jawa dan Eropa tersebut dibangun pada tahun 1831 dan
+                berdiri berhadapan dengan alun-alun kota yang diperkirakan dibangun pada periode yang sama.
+                Keberadaan bangunan ini menjadi saksi perkembangan pemerintahan Purwakarta sejak masa kolonial.
+            </p>
+            <br>
+            <p>
+                Sebelum dikenal sebagai Purwakarta, wilayah tersebut merupakan bagian dari Kabupaten Karawang dengan
+                pusat pemerintahan berada di Wanayasa.
+                Berdasarkan keputusan Gubernur Jenderal Hindia Belanda, ibu kota Kabupaten Karawang dipindahkan ke
+                Sindangkasih pada 9 Januari 1830 atas prakarsa Bupati Raden Adipati Aria (R.A.A.) Suriawinata.
+                Selanjutnya, pada 20 Juli 1831, nama ibu kota resmi diubah menjadi Purwakarta, sebagaimana tercantum
+                dalam surat kabar Hindia Belanda Javasche Courant.
+            </p>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="title">Jelajahi Purwakarta</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <a href="wisata.html" class="card h-100 text-decoration-none">
+                    <img src="https://i0.wp.com/infoka.id/wp-content/uploads/2024/05/purwakarta-1024x576.jpg?resize=740%2C416&ssl=1"
+                        class="card-img-top img-fluid" alt="Wisata">
+                    <div class="card-body text-center">
+                        <h3 class="card-title text-primary">Wisata Purwakarta</h3>
+                        <p class="card-text text-muted">Temukan destinasi alam dan wahana rekreasi menakjubkan.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6">
+                <a href="kuliner.html" class="card h-100 text-decoration-none">
+                    <img src="https://1.bp.blogspot.com/-DSKsOgrUqls/YQjush0S2HI/AAAAAAAAOAA/Knc-0NnMkdAvU4vSZeOots46FGrPtl0tACLcBGAsYHQ/s2048/Rumah%2BMakan%2BCiganea%2B-%2BPurwakarta%2B17.JPG"
+                        class="card-img-top img-fluid" alt="Kuliner">
+                    <div class="card-body text-center">
+                        <h3 class="card-title text-primary">Kuliner Purwakarta</h3>
+                        <p class="card-text text-muted">Nikmati kelezatan kuliner khas legendaris Sate Maranggi.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        2026 Pesona Purwakarta | Portal Informasi Pariwisata
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="darkmode.js"></script>
+
+</body>
+
+</html>

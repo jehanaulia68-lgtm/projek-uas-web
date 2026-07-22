@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesona Purwakarta - Wisata</title>
+
+    <link rel="stylesheet" href="darkmode.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        button.dark-mode {
+            background: transparent;
+            border: none;
+            color: white;
+            margin-left: 15px;
+        }
+
+        body {
+            background: #F4F8FB;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #0D6EFD, #3b82f6);
+            padding: 15px 0;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            transition: .3s;
+            margin-left: 15px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #FFD54F !important;
+        }
+
+        .hero {
+            height: 400px;
+            background: url(https://i0.wp.com/infoka.id/wp-content/uploads/2024/05/purwakarta-1024x576.jpg?resize=740%2C416&ssl=1) center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            padding: 20px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .45);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+
+        .title {
+            font-size: 32px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+
+        .card-wisata {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .05);
+            transition: .3s;
+            border: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-wisata:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-wisata img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 15px;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .btn-detail {
+            margin-top: auto;
+            background: #0D6EFD;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-detail:hover {
+            background: #3b82f6;
+            color: white;
+        }
+
+        footer {
+            background: #0D6EFD;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 300px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .title {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="beranda.html">
+                    <img src="logo.png" width="40" class="me-2" alt="">
+                    <strong>Pesona Purwakarta</strong>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="beranda.html">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="wisata.html">Wisata</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kuliner.html">Kuliner</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pesantiket.html">Pesan Tiket</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="hero">
+        <div class="hero-content container">
+            <h1>Wisata Purwakarta</h1>
+            <p>Jelajahi keindahan alam, kuliner, budaya, dan destinasi wisata terbaik di Purwakarta</p>
+            <a href="#destinasi" class="btn btn-primary btn-lg px-4 fw-bold">Jelajahi Sekarang</a>
+        </div>
+    </div>
+
+
+    <main id="destinasi" class="container my-5">
+        <h2 class="title text-center text-md-start">Destinasi Populer</h2>
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card-wisata">
+                    <img src="https://i.pinimg.com/736x/e5/f1/e8/e5f1e82aed9586738783b1405742eb98.jpg" alt="Sribaduga">
+                    <div class="card-content">
+                        <h3>Taman Air Mancur Sribaduga</h3>
+                        <p>Taman Air Mancur Sribaduga merupakan taman air mancur terbesar di Asia Tenggara.
+                            Pertunjukannya setiap sabtu malam minggu pukul 19.30 WIB dan 20.30 WIB. Tiket masuk gratis.
+                        </p>
+                        <a href="sribaduga.html" class="btn-detail">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card-wisata">
+                    <img src="https://i.pinimg.com/736x/e5/f4/78/e5f4784eb7135889e07355458d1b020c.jpg" alt="Jatiluhur">
+                    <div class="card-content">
+                        <h3>Waduk Jatiluhur</h3>
+                        <p>Nikmati panorama waduk terbesar di Indonesia dengan berbagai aktivitas seru seperti
+                            memancing, berperahu menyisir danau, dan menikmati matahari terbenam yang eksotis.</p>
+                        <a href="wadukjatiluhur.html" class="btn-detail">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 mx-md-auto mx-lg-0">
+                <div class="card-wisata">
+                    <img src="https://i.pinimg.com/736x/a7/38/3b/a7383b84d76cb055ed1c5027c7453e6d.jpg"
+                        alt="Gunung Parang">
+                    <div class="card-content">
+                        <h3>Gunung Parang</h3>
+                        <p>Destinasi favorit bagi pencinta alam ekstrem dengan jalur Via Ferrata tertinggi di Indonesia
+                            serta pemandangan hamparan alam Purwakarta yang luar biasa dari puncak tebing batu.</p>
+                        <a href="gunungparang.html" class="btn-detail">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <p class="mb-0">&copy; 2026 Pesona Purwakarta | Portal Informasi Pariwisata Resmi</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="darkmode.js"></script>
+
+</body>
+
+</html>

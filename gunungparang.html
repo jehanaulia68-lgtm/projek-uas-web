@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesona Purwakarta - Gunung Parang</title>
+
+    <link rel="stylesheet" href="darkmode.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #F4F8FB;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #0D6EFD, #3b82f6);
+            padding: 15px 0;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            transition: .3s;
+            margin-left: 15px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #FFD54F !important;
+        }
+
+        .hero {
+            height: 400px;
+            background: url(https://i.pinimg.com/736x/a7/38/3b/a7383b84d76cb055ed1c5027c7453e6d.jpg) center/cover no-repeat;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: relative;
+            padding: 20px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .3);
+        }
+
+        .back-button {
+            position: relative;
+            z-index: 2;
+        }
+
+        .back-button a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .back-button a:hover {
+            background: #0D6EFD;
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .info-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .05);
+        }
+
+        .info-box h1 {
+            font-size: 38px;
+            color: #0D6EFD;
+            font-weight: 700;
+        }
+
+        .info-box p {
+            line-height: 1.8;
+            text-align: justify;
+            color: #444;
+            font-size: 17px;
+        }
+
+        .card-custom {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+            border: none;
+            height: 100%;
+        }
+
+        .card-custom h2 {
+            color: #0D6EFD;
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        footer {
+            background: #0D6EFD;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 250px;
+            }
+
+            .info-box {
+                padding: 25px;
+            }
+
+            .info-box h1 {
+                font-size: 28px;
+            }
+
+            .info-box p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="beranda.html">
+                    <img src="logo.png" width="40" class="me-2" alt="">
+                    <strong>Pesona Purwakarta</strong>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="beranda.html">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="wisata.html">Wisata</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kuliner.html">Kuliner</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pesantiket.html">Pesan Tiket</a></li>
+                        <button class="dark-mode" onclick="ubahMode()" id="toggleDarkMode">Dark mode 🌙</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="hero">
+        <div class="container">
+            <div class="back-button">
+                <a href="wisata.html" title="Kembali ke Daftar Wisata"> ❮ </a>
+            </div>
+        </div>
+    </div>
+
+
+    <main class="container my-5">
+
+
+        <div class="info-box mb-5">
+            <h1 class="mb-4">Gunung Parang</h1>
+            <p class="mb-3">
+                Gunung Parang merupakan salah satu destinasi wisata alam unggulan di Kabupaten Purwakarta yang terkenal
+                dengan keindahan panorama pegunungan dan tebing batu yang menjulang tinggi. Tempat ini menjadi favorit
+                para pencinta alam karena menawarkan suasana yang sejuk, asri, dan jauh dari hiruk-pikuk perkotaan.
+            </p>
+            <p class="mb-3">
+                Gunung Parang dikenal memiliki jalur Via Ferrata tertinggi di Indonesia, yaitu jalur pendakian yang
+                dilengkapi tangga besi dan sistem pengaman khusus. Melalui jalur ini, pengunjung dapat menikmati
+                pengalaman mendaki yang menantang sekaligus menyaksikan pemandangan Waduk Jatiluhur dan hamparan alam
+                Purwakarta dari ketinggian.
+            </p>
+            <p class="mb-0">
+                Selain aktivitas pendakian, Gunung Parang juga menyediakan berbagai fasilitas wisata, seperti area
+                berkemah, tempat istirahat, dan spot foto yang menarik. Destinasi ini sangat cocok dikunjungi bersama
+                teman maupun keluarga untuk menikmati keindahan alam serta menciptakan pengalaman yang tak terlupakan.
+            </p>
+        </div>
+
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card-custom">
+                    <h2>Jam Operasional</h2>
+                    <table>
+                        <tr>
+                            <td>Senin</td>
+                            <td class="text-end">08.00 - 17.00 WIB</td>
+                        </tr>
+                        <tr>
+                            <td>Selasa</td>
+                            <td class="text-end">08.00 - 17.00 WIB</td>
+                        </tr>
+                        <tr>
+                            <td>Rabu</td>
+                            <td class="text-end">08.00 - 17.00 WIB</td>
+                        </tr>
+                        <tr>
+                            <td>Kamis</td>
+                            <td class="text-end">08.00 - 17.00 WIB</td>
+                        </tr>
+                        <tr>
+                            <td>Jumat</td>
+                            <td class="text-end">08.00 - 17.00 WIB</td>
+                        </tr>
+                        <tr>
+                            <td>Sabtu</td>
+                            <td class="text-end">07.00 - 18.00 WIB</td>
+                        </tr>
+                        <tr>
+                            <td>Minggu</td>
+                            <td class="text-end">07.00 - 18.00 WIB</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+                <div class="card-custom">
+                    <h2>Syarat dan Ketentuan</h2>
+                    <table>
+                        <tr>
+                            <td class="align-top fw-bold" style="width: 5%;">1.</td>
+                            <td>Pengunjung wajib menjaga kebersihan dan membuang sampah pada tempatnya.</td>
+                        </tr>
+                        <tr>
+                            <td class="align-top fw-bold">2.</td>
+                            <td>Dilarang merusak fasilitas umum maupun lingkungan sekitar.</td>
+                        </tr>
+                        <tr>
+                            <td class="align-top fw-bold">3.</td>
+                            <td>Pengunjung yang ingin mencoba jalur Via Ferrata wajib menggunakan perlengkapan
+                                keselamatan yang telah disediakan.</td>
+                        </tr>
+                        <tr>
+                            <td class="align-top fw-bold">4.</td>
+                            <td>Ikuti arahan petugas dan pemandu selama berada di area wisata.</td>
+                        </tr>
+                        <tr>
+                            <td class="align-top fw-bold">5.</td>
+                            <td>Bagi pengunjung yang memiliki riwayat penyakit tertentu atau takut ketinggian,
+                                disarankan untuk tidak mengikuti aktivitas pendakian ekstrem.</td>
+                        </tr>
+                        <tr>
+                            <td class="align-top fw-bold">6.</td>
+                            <td>Anak-anak harus didampingi oleh orang tua atau wali.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <p class="mb-0">2026 Pesona Purwakarta | Portal Informasi Pariwisata Resmi</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="darkmode.js"></script>
+
+</body>
+
+</html>

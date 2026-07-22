@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesona Purwakarta - Pesan Tiket</title>
+
+    <link rel="stylesheet" href="darkmode.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        button.dark-mode {
+            background: transparent;
+            border: none;
+            color: white;
+            margin-left: 15px;
+        }
+
+        body {
+            background: #F4F8FB;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #0D6EFD, #3b82f6);
+            padding: 15px 0;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            transition: .3s;
+            margin-left: 15px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #FFD54F !important;
+        }
+
+        .hero {
+            height: 350px;
+            background: url(https://i0.wp.com/infoka.id/wp-content/uploads/2024/05/purwakarta-1024x576.jpg?resize=740%2C416&ssl=1) center/cover no-repeat;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: relative;
+            padding: 20px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .3);
+        }
+
+        .back-button {
+            position: relative;
+            z-index: 2;
+        }
+
+        .back-button a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .back-button a:hover {
+            background: #0D6EFD;
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .card-custom {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .04);
+            border: none;
+        }
+
+        .ticket-desc p {
+            line-height: 1.8;
+            text-align: justify;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            border: 0;
+        }
+
+        .jumlah-btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 1px solid #0D6EFD;
+            background: transparent;
+            color: #0D6EFD;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .jumlah-btn:hover {
+            background: #0D6EFD;
+            color: white;
+        }
+
+        footer {
+            background: #0D6EFD;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="beranda.html">
+                    <img src="logo.png" width="40" class="me-2" alt="Logo">
+                    <strong>Pesona Purwakarta</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="beranda.html">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="wisata.html">Wisata</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kuliner.html">Kuliner</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="pesantiket.html">Pesan Tiket</a></li>
+                        <button class="dark-mode" onclick="ubahMode()" id="toggleDarkMode">Dark mode 🌙</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <div class="back-button">
+                <a href="sribaduga.html" title="Kembali"> ❮ </a>
+            </div>
+        </div>
+    </div>
+
+
+    <main class="container my-5">
+        <div class="row g-4">
+
+
+            <div class="col-lg-8">
+
+
+                <div class="card-custom ticket-desc mb-4">
+                    <h1 class="fw-bold mb-4 text-primary">🎫 Pesan Tiket - Sri Baduga</h1>
+                    <p class="mb-3">
+                        Taman Air Mancur Sri Baduga merupakan salah satu destinasi wisata unggulan and ikon kebanggaan
+                        Kabupaten Purwakarta. Berlokasi di kawasan Situ Buleud, tempat wisata ini dikenal sebagai salah
+                        satu taman air mancur terbesar di Asia Tenggara yang menyajikan perpaduan pertunjukan air,
+                        cahaya, dan musik yang memukau.
+                    </p>
+                    <p class="mb-3">
+                        Setiap pertunjukan menghadirkan semburan air yang berpadu dengan permainan lampu warna-warni dan
+                        iringan musik, sehingga menciptakan suasana yang indah dan menghibur bagi para pengunjung.
+                        Keunikan tersebut menjadikan Taman Air Mancur Sri Baduga sebagai tujuan wisata favorit bagi
+                        masyarakat lokal maupun wisatawan dari berbagai daerah.
+                    </p>
+                    <p class="mb-0">
+                        Melalui layanan pemesanan tiket ini, pengunjung dapat menentukan jadwal kunjungan serta jumlah
+                        tiket yang dibutuhkan dengan lebih mudah dan praktis. Pastikan untuk memilih tanggal kunjungan
+                        yang tersedia agar dapat menikmati pertunjukan dengan nyaman bersama keluarga, teman, maupun
+                        kerabat.
+                    </p>
+                </div>
+
+
+                <div class="card-custom mb-4">
+                    <h5 class="fw-bold mb-3">📅 Tanggal Kunjungan</h5>
+                    <input type="date" class="form-control form-control-lg">
+                </div>
+
+
+                <div class="card-custom mb-4">
+                    <h5 class="fw-bold mb-4">👥 Jumlah Pengunjung</h5>
+
+
+                    <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                        <div class="d-flex align-items-center">
+                            <span class="fs-3 me-3">👤</span>
+                            <div>
+                                <h6 class="fw-bold mb-0">Dewasa</h6>
+                                <small class="text-muted">Rp 50.000 / orang</small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="jumlah-btn btn-kurang" data-type="dewasa">-</button>
+                            <span class="fw-bold fs-5" id="qty-dewasa">2</span>
+                            <button class="jumlah-btn btn-tambah" data-type="dewasa">+</button>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <span class="fs-3 me-3">🧒</span>
+                            <div>
+                                <h6 class="fw-bold mb-0">Anak-Anak</h6>
+                                <small class="text-muted">Rp 30.000 / orang</small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="jumlah-btn btn-kurang" data-type="anak">-</button>
+                            <span class="fw-bold fs-5" id="qty-anak">1</span>
+                            <button class="jumlah-btn btn-tambah" data-type="anak">+</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-custom">
+                    <h5 class="fw-bold mb-3">📍 Lokasi Taman Air Mancur Sri Baduga</h5>
+                    <div class="map-container shadow-sm border">
+                        <iframe
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=107.440%2C-6.559%2C107.450%2C-6.550&amp;layer=mapnik&amp;marker=-6.5547%2C107.4453"></iframe>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+                <div class="card-custom sticky-lg-top" style="top: 100px; z-index: 10;">
+                    <h4 class="fw-bold mb-4">Ringkasan Pesanan</h4>
+
+                    <div class="d-flex justify-content-between mb-2">
+                        <span id="text-summary-dewasa" class="text-muted">Dewasa (2)</span>
+                        <span id="subtotal-dewasa" class="fw-bold">Rp 100.000</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span id="text-summary-anak" class="text-muted">Anak-Anak (1)</span>
+                        <span id="subtotal-anak" class="fw-bold">Rp 30.000</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between align-items-center my-3">
+                        <span class="fw-bold text-dark fs-5">Total Akhir</span>
+                        <span id="total-akhir" class="fw-bold text-primary fs-4">Rp 130.000</span>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg w-100 py-3 fw-bold rounded-3 mt-2" data-bs-toggle="modal"
+                        data-bs-target="#checkoutModal">
+                        Lanjutkan Pembayaran →
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3" style="border-radius: 20px;">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="checkoutModalLabel">Konfirmasi Transaksi</h5>
+                    <button type="button" class="btn-close" data-bs-close="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <span class="fs-1 mb-3 d-block">🎉</span>
+                    <h5 class="fw-bold">Pemesanan Tiket Berhasil!</h5>
+                    <p class="text-muted px-2 mt-2">Data transaksi Anda telah tersimpan di sistem data. Silakan lakukan
+                        penyelesaian pembayaran di gerbang utama destinasi.</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary w-100 py-2 rounded-3 fw-bold"
+                        data-bs-close="modal">Kembali</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p class="mb-0">&copy; 2026 Pesona Purwakarta | Portal Informasi Pariwisata Resmi</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        const HARGA_DEWASA = 50000;
+        const HARGA_ANAK = 30000;
+
+        const qtyDewasaEl = document.getElementById('qty-dewasa');
+        const qtyAnakEl = document.getElementById('qty-anak');
+
+        const textSummaryDewasa = document.getElementById('text-summary-dewasa');
+        const textSummaryAnak = document.getElementById('text-summary-anak');
+
+        const subtotalDewasaEl = document.getElementById('subtotal-dewasa');
+        const subtotalAnakEl = document.getElementById('subtotal-anak');
+        const totalAkhirEl = document.getElementById('total-akhir');
+
+        function updateKalkulasi() {
+            const qtyDewasa = parseInt(qtyDewasaEl.textContent);
+            const qtyAnak = parseInt(qtyAnakEl.textContent);
+
+            const subtotalDewasa = qtyDewasa * HARGA_DEWASA;
+            const subtotalAnak = qtyAnak * HARGA_ANAK;
+            const total = subtotalDewasa + subtotalAnak;
+
+            textSummaryDewasa.textContent = `Dewasa (${qtyDewasa})`;
+            textSummaryAnak.textContent = `Anak-Anak (${qtyAnak})`;
+
+            subtotalDewasaEl.textContent = `Rp ${subtotalDewasa.toLocaleString('id-ID')}`;
+            subtotalAnakEl.textContent = `Rp ${subtotalAnak.toLocaleString('id-ID')}`;
+            totalAkhirEl.textContent = `Rp ${total.toLocaleString('id-ID')}`;
+        }
+
+        document.querySelectorAll('.btn-tambah').forEach(button => {
+            button.addEventListener('click', function () {
+                const jenis = this.getAttribute('data-type');
+                if (jenis === 'dewasa') {
+                    qtyDewasaEl.textContent = parseInt(qtyDewasaEl.textContent) + 1;
+                } else if (jenis === 'anak') {
+                    qtyAnakEl.textContent = parseInt(qtyAnakEl.textContent) + 1;
+                }
+                updateKalkulasi();
+            });
+        });
+
+        document.querySelectorAll('.btn-kurang').forEach(button => {
+            button.addEventListener('click', function () {
+                const jenis = this.getAttribute('data-type');
+                if (jenis === 'dewasa') {
+                    let current = parseInt(qtyDewasaEl.textContent);
+                    if (current > 0) qtyDewasaEl.textContent = current - 1;
+                } else if (jenis === 'anak') {
+                    let current = parseInt(qtyAnakEl.textContent);
+                    if (current > 0) qtyAnakEl.textContent = current - 1;
+                }
+                updateKalkulasi();
+            });
+        });
+    </script>
+    <script src="darkmode.js"></script>
+
+</body>
+
+</html>
